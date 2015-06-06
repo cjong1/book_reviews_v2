@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Add a book and review</title>
-	<link rel="stylesheet" href="../assets/css/bootstrap.css">
-	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<style type="text/css">
 
 		#header {

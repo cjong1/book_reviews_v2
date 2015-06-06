@@ -11,7 +11,7 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('book_review');
+		$this->load->view('index');
 	}
 
 	public function register()
