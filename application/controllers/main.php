@@ -11,12 +11,17 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('book_review');
 	}
 
 	public function register()
 	{
-		// $this->load->view('register');
+		$this->load->view('register');
+	}
+
+	public function user_register()
+	{
+		$this->load->view('register');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', 'name', 'required');
 		$this->form_validation->set_rules('alias', 'alias', 'required');
@@ -56,6 +61,10 @@ class Main extends CI_Controller {
 	public function login()
 	{
 		$this->load->view('login');
+	}
+
+	public function user_login()
+	{
 		$email = $this->input->post('login_email');
 		$password = md5($this->input->post('login_password'));
 		$user = $this->books->get_user_by_email($email);

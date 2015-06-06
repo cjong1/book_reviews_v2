@@ -13,16 +13,14 @@
 
       <div class="site-wrapper-inner">
 
-        <!-- <div class="cover-container"> -->
-
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand">Read & Rate</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="/main/index">Home</a></li>
                   <li><a href="/main/login">Login</a></li>
-                  <li><a href="#">Register</a></li>
+                  <li><a href="/main/register">Register</a></li>
                 </ul>
               </nav>
             </div>
@@ -32,11 +30,9 @@
             <h1 class="cover-heading">Read and rate your books.</h1>
             <p class="lead">Growing as a reviewer, one book at a time.</p>
             <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Get started</a>
+              <a href="/main/register" class="btn btn-lg btn-default">Get started</a>
             </p>
           </div>
-
-        <!-- </div> -->
 
       </div>
 
@@ -46,8 +42,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
  </body>
 </html>
