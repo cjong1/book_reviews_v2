@@ -33,7 +33,7 @@ class books extends CI_Model {
 
 	function get_books()
 	{
-		$query = $this->db->query("SELECT books.name from books");
+		$query = $this->db->query("SELECT books.image, books.id from books");
 		return $query->result();
 	}
 

@@ -91,7 +91,6 @@ class Main extends CI_Controller {
 	{
 		$reviews = $this->books->get_reviews();
 		$books = $this->books->get_books();
-		echo $reviews;
 		$this->load->view('books', 
 				array('review' => $reviews, 'books' => $books)
 				);
