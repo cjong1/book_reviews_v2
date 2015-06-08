@@ -119,6 +119,11 @@ hr {
 	border-top: 1px solid #E0D6CC;
 }
 
+.glyphicon {
+    color: #FFCC00;
+    text-shadow: none;
+}
+
 /*********************************** ALL BOOKS ***********************************/
 
 .other-books {

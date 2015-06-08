@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Welcome, <?= $this->session->userdata('alias') ?></a>
+                <a class="navbar-brand page-scroll">Read & Rate</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,9 +58,27 @@
 			foreach ($review as $book) {
 ?>
 				<a href="/main/show/<?= $book->book_id ?>"><?= $book->name ?></a>
-				<p>Rating: <?= $book->rating ?></p>
+				<p>Rating: 
+<?php
+    $rating = $book->rating;
+
+        if ($rating == 0) {
+            echo "<p>No reviews yet.</p>";
+        }
+        else {
+            for ($i = 0; $i<$rating; $i++) {
+                echo "<span class='glyphicon glyphicon-star'></span>";
+            };
+            for ($j = 0; $j<(5-$rating); $j++) {
+                echo "<span class='glyphicon glyphicon-star-empty'></span>";
+            }
+        }
+?>
+                </p>
 				<p><a href="/main/users/<?= $book->id ?>"><?= $book->alias ?></a> says: <?= $book->review ?><p>
-				<h6>Posted on <?= $book->created_at ?></h6>
+				<h6>Posted on <?php 
+                $date = strtotime( $book->created_at );
+                echo date( 'F d, Y g:i A', $date ); ?></h6>
 
 				<hr>
 <?php

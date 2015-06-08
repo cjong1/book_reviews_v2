@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Read & Rate</a>
+                <a class="navbar-brand page-scroll">Read & Rate</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,6 +33,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a class="page-scroll" href="/main/books">My Account</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/main/add">Add Book</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/main/logout">Logout</a>
