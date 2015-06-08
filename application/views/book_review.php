@@ -57,7 +57,7 @@
                 <img class="img-responsive" src="<?= $reviews[0]['image'] ?>" alt="">
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-9">
                 <div class="caption-full">
                     <h4><a href="#"><?= $reviews[0]['name'] ?></a></h4>
                     <h5><?= $reviews[0]['author'] ?></h5>
@@ -76,21 +76,12 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <p class="lead">Shop Name</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                </div>
-            </div>
-
             <div class="row"></div>
 
             <div class="well">
 
                 <div class="text-right">
-                    <a class="btn btn-success">Leave a Review</a>
+                    <a class="btn btn-md btn-default">Leave a Review</a>
                 </div>
 
 <?php
@@ -105,7 +96,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star-empty"></span>
-                        <?= $review['alias'] ?>
+                        <a href="/main/users/<?= $review->id ?>"><?= $review['alias'] ?></a>
                         <abbr class="timeago pull-right" title="<?= $review['created_at'] ?>"></abbr>
                         <p><?= $review['review'] ?></p>
                     </div>
