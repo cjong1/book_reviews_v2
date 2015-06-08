@@ -21,7 +21,6 @@ class Main extends CI_Controller {
 
 	public function user_register()
 	{
-		$this->load->view('register');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', 'name', 'required');
 		$this->form_validation->set_rules('alias', 'alias', 'required');
@@ -32,12 +31,13 @@ class Main extends CI_Controller {
 		if($this->form_validation->run() === FALSE)
 		{
 			$this->session->set_flashdata('error', validation_errors());
-			redirect('/');
+			redirect('/main/register');
 		}
 		else
 		{
 			$this->books->create_user($this->input->post());
-			redirect('/');
+			$this->session->set_flashdata('reg_successful', 'You have successfully registered! Please login to start reviewing.');
+			redirect('/main/register');
 		}
 
 	}
@@ -116,7 +116,7 @@ class Main extends CI_Controller {
 		else
 		{
 			$this->books->add_book_old($post);
-			redirect('/main/books');
+			redirect('/main/show/'.$book_id[0]->id);
 		}
 	}
 

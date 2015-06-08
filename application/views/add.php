@@ -49,7 +49,7 @@
     	<div class="site-wrapper-inner">
 
 			<form class="form-horizontal form-signin" role="form" action="/main/new_book" method="post">
-		        <h2 class="form-signin-heading">Add a new book and review</h2>
+		        <h2 class="form-signin-heading">Add a new book</h2>
 				<div class="form-group">
 					<h4><label class="control-label col-sm-2" for="title">Title:</label></h4>
 					<div class="col-sm-10">
@@ -77,24 +77,18 @@
 			    	</div>
 			  	</div>
 				<div class="form-group">
-					<h4><label class="control-label col-sm-2" for="review">Review:</label></h4>
+				    <h4><label class="control-label col-sm-2" for="image">Book cover image:</label></h4>
+				    <div class="col-sm-10"> 
+						<input type="text" class="form-control" id="image" placeholder="http://" name="image" required>
+			    	</div>
+			  	</div>
+				<div class="form-group">
+					<h4><label class="control-label col-sm-2" for="summary">Summary:</label></h4>
 					<div class="col-sm-10">
-						<textarea class="form-control" rows="5" id="review" name="review" placeholder="Write your review..." required></textarea>
+						<textarea class="form-control" rows="5" id="summary" name="summary" placeholder="Add plot summary..." required></textarea>
 					</div>
 			  	</div>
-			  	<div class="form-group">
-					<h4><label class="control-label col-sm-2" for="rating">Rating:</label></h4>
-					<div class="col-sm-10">
-						<select class="form-control" id="rating" name="rating" required>
-			        		<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-					</div>
-				</div>
-				<button class="btn btn-lg btn-default submit" type="submit">Add Book and Review</button>
+				<button class="btn btn-lg btn-default submit" type="submit">Add Book</button>
 				<input type='hidden' value='<?= $this->session->userdata('id') ?>' name='user'>
 			</form>
 

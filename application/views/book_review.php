@@ -67,7 +67,14 @@
                     <p><?= $reviews[0]['summary'] ?></p>
                 </div>
                 <div class="ratings">
-                    <p><?= count($reviews) ?> review(s)</p>
+<?php  
+            if ($reviews[0]['review'] == NULL) {
+                echo "<p>0 review(s)</p>";
+            }
+            else {
+                echo "<p>".count($reviews)." review(s)</p>";
+            }
+?>
                 </div>
             </div>
 
@@ -76,7 +83,7 @@
             <div class="well">
 
                 <div class="text-right">
-                    <a href="/main/review/<?= $reviews[0]['id'] ?>" class="btn btn-md btn-default">Leave a Review</a>
+                    <a href="/main/review/<?= $reviews[0]['book_id'] ?>" class="btn btn-md btn-default">Leave a Review</a>
                 </div>
 
 <?php
@@ -89,11 +96,16 @@
 <?php
     $rating = $review['rating'];
 
-        for ($i = 0; $i<$rating; $i++) {
-            echo "<span class='glyphicon glyphicon-star'></span>";
-        };
-        for ($j = 0; $j<(5-$rating); $j++) {
-            echo "<span class='glyphicon glyphicon-star-empty'></span>";
+        if ($rating == 0) {
+            echo "<p>No reviews yet.</p>";
+        }
+        else {
+            for ($i = 0; $i<$rating; $i++) {
+                echo "<span class='glyphicon glyphicon-star'></span>";
+            };
+            for ($j = 0; $j<(5-$rating); $j++) {
+                echo "<span class='glyphicon glyphicon-star-empty'></span>";
+            }
         }
 ?>
                         <a href="/main/users/<?= $review['id'] ?>"><?= $review['alias'] ?></a>

@@ -63,7 +63,6 @@ class books extends CI_Model {
 		$query = $this->db->query("SELECT books.name, books.author, books.id as book_id, reviews.review, reviews.rating, users.id, users.alias, reviews.created_at, books.image, books.summary FROM books
 			LEFT JOIN reviews ON books.id = reviews.books_id
 			LEFT JOIN users ON users.id = reviews.users_id
-			-- ORDER BY created_at DESC
 			WHERE books.id = ?
 			ORDER BY created_at DESC", array($id));
 		return $query->result_array();
@@ -77,9 +76,9 @@ class books extends CI_Model {
 
 	function add_book_new($data)
 	{
-		$query = $this->db->query("INSERT INTO books (name, author) VALUES(?,?)", array($data['title'], $data['new_author']));
+		$query = $this->db->query("INSERT INTO books (name, author, image, summary, created_at) VALUES(?,?,?,?,NOW())", array($data['title'], $data['new_author'], $data['image'], $data['summary']));
 		$id = $this->db->insert_id();
-		$this->create_review($data, $id);
+		return $query;
 	}
 
 	function create_review($data,$id)
@@ -88,9 +87,9 @@ class books extends CI_Model {
 		return $query;
 	}
 
-	function add_book_old()
+	function add_book_old($data)
 	{
-		$query = $this->db->query("INSERT INTO books (name, author) VALUES(?,?)", array($data['title'], $data['author_list']));
+		$query = $this->db->query("INSERT INTO books (name, author, image, summary, created_at) VALUES(?,?,?,?,NOW())", array($data['title'], $data['author_list'], $data['image'], $data['summary']));
 		return $query;
 	}
 

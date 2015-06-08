@@ -30,7 +30,11 @@
 <?php
 	if($this->session->flashdata('error'))
 	{
-		echo "<p>". $this->session->flashdata('error'). "</p>";
+		echo "<p class='message'>". $this->session->flashdata('error'). "</p>";
+	}
+	else if($this->session->flashdata('reg_successful'))
+	{
+		echo "<p class='message'>". $this->session->flashdata('reg_successful'). "</p>";
 	}
 ?>	
 		        <h2 class="form-signin-heading">Please register</h2>

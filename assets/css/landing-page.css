@@ -182,3 +182,7 @@ body {
 .submit {
   margin-top: 10px;
 }
+
+.message {
+  color: white;
+}

@@ -60,7 +60,7 @@
     	<div class="site-wrapper-inner">
 
 			<form class="form-horizontal form-signin" role="form" action="/main/new_review" method="post">
-		        <h2 class="form-signin-heading">Add a new book and review</h2>
+		        <h2 class="form-signin-heading">Add a review</h2>
 				<div class="form-group">
 					<h4><label class="control-label col-sm-2" for="title">Title:</label></h4>
 					<div class="col-sm-10">
@@ -91,8 +91,8 @@
 						</select>
 					</div>
 				</div>
-				<button class="btn btn-lg btn-default submit" type="submit">Add Book and Review</button>
-				<input type='hidden' value='<?= $book[0]['id'] ?>' name='book'>
+				<button class="btn btn-lg btn-default submit" type="submit">Add Review</button>
+				<input type='hidden' value='<?= $book[0]['book_id'] ?>' name='book'>
 				<input type='hidden' value='<?= $this->session->userdata('id') ?>' name='user'>
 			</form>
 
