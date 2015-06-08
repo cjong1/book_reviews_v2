@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
     <!-- Custom CSS -->
-    <link href="/assets/css/book-item.css" rel="stylesheet">
+    <link href="/assets/css/review.css" rel="stylesheet">
 
     <!-- Font -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -18,6 +18,8 @@
 </head>
 
 <body>
+
+<!-- HEADER -->
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -51,66 +53,52 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Page Content -->
-    <div class="container">
+<!--     ADD REVIEW FORM -->
 
-        <div class="row">
+    <div class="site-wrapper">
 
-            <div class="col-md-3">
-                <img class="img-responsive" src="<?= $reviews[0]['image'] ?>" alt="">
-            </div>
+    	<div class="site-wrapper-inner">
 
-            <div class="col-md-9">
-                <div class="caption-full">
-                    <h4><a href="#"><?= $reviews[0]['name'] ?></a></h4>
-                    <h5><?= $reviews[0]['author'] ?></h5>
-                    <p><?= $reviews[0]['summary'] ?></p>
-                </div>
-                <div class="ratings">
-                    <p><?= count($reviews) ?> review(s)</p>
-                </div>
-            </div>
+			<form class="form-horizontal form-signin" role="form" action="/main/new_review" method="post">
+		        <h2 class="form-signin-heading">Add a new book and review</h2>
+				<div class="form-group">
+					<h4><label class="control-label col-sm-2" for="title">Title:</label></h4>
+					<div class="col-sm-10">
+						<input type="title" class="form-control" id="title" value="<?= $book[0]['name'] ?>" name="title" readonly>
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+					<h4><label class="control-label col-sm-2" for="author">Author:</label></h4>
+					<div class="col-sm-10">
+						<input type="author" class="form-control" id="author" value="<?= $book[0]['author'] ?>" name="author" readonly>
+			    	</div>
+			  	</div>
+				<div class="form-group">
+					<h4><label class="control-label col-sm-2" for="review">Review:</label></h4>
+					<div class="col-sm-10">
+						<textarea class="form-control" rows="5" id="review" name="review" placeholder="Write your review..." required></textarea>
+					</div>
+			  	</div>
+			  	<div class="form-group">
+					<h4><label class="control-label col-sm-2" for="rating">Rating:</label></h4>
+					<div class="col-sm-10">
+						<select class="form-control" id="rating" name="rating" required>
+			        		<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+				</div>
+				<button class="btn btn-lg btn-default submit" type="submit">Add Book and Review</button>
+				<input type='hidden' value='<?= $book[0]['id'] ?>' name='book'>
+				<input type='hidden' value='<?= $this->session->userdata('id') ?>' name='user'>
+			</form>
 
-            <div class="row"></div>
+		</div>
 
-            <div class="well">
-
-                <div class="text-right">
-                    <a href="/main/review/<?= $reviews[0]['id'] ?>" class="btn btn-md btn-default">Leave a Review</a>
-                </div>
-
-<?php
-            foreach ($reviews as $review) {
-?>
-            <hr>
-
-                <div class="row">
-                    <div class="col-md-12">
-<?php
-    $rating = $review['rating'];
-
-        for ($i = 0; $i<$rating; $i++) {
-            echo "<span class='glyphicon glyphicon-star'></span>";
-        };
-        for ($j = 0; $j<(5-$rating); $j++) {
-            echo "<span class='glyphicon glyphicon-star-empty'></span>";
-        }
-?>
-                        <a href="/main/users/<?= $review['id'] ?>"><?= $review['alias'] ?></a>
-                        <abbr class="timeago pull-right" title="<?= $review['created_at'] ?>"></abbr>
-                        <p><?= $review['review'] ?></p>
-                    </div>
-                </div>
-<?php
-            }
-?>
-
-            </div>
-
-        </div>
-
-    </div>
-    <!-- /.container -->
+	</div>
 
     <!-- jQuery -->
     <script src="/assets/js/jquery.js"></script>

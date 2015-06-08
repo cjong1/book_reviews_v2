@@ -137,6 +137,13 @@ class Main extends CI_Controller {
 			);
 	}
 
+	public function review($id)
+	{
+		$book_to_review = $this->books->get_reviews_by_book($id);
+		$this->load->view('add_review', array('book' => $book_to_review)
+			);
+	}
+
 		public function new_review()
 		{
 			$book_id = $this->input->post('book');
