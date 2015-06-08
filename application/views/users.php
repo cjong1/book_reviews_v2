@@ -38,6 +38,9 @@
                         <a class="page-scroll" href="/main/books">My Account</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="/main/add">Add Book</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="/main/logout">Logout</a>
                     </li>
                 </ul>

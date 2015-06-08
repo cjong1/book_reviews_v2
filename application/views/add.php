@@ -79,7 +79,7 @@
 				<div class="form-group">
 					<h4><label class="control-label col-sm-2" for="review">Review:</label></h4>
 					<div class="col-sm-10">
-						<textarea class="form-control" rows="5" id="review" name="review" required></textarea>
+						<textarea class="form-control" rows="5" id="review" name="review" placeholder="Write your review..." required></textarea>
 					</div>
 			  	</div>
 			  	<div class="form-group">
@@ -94,7 +94,7 @@
 						</select>
 					</div>
 				</div>
-				<button class="btn btn-md btn-default submit" type="submit">Add Book and Review</button>
+				<button class="btn btn-lg btn-default submit" type="submit">Add Book and Review</button>
 				<input type='hidden' value='<?= $this->session->userdata('id') ?>' name='user'>
 			</form>
 

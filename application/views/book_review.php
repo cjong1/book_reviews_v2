@@ -39,6 +39,9 @@
                         <a class="page-scroll" href="/main/books">My Account</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="/main/add">Add Book</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="/main/logout">Logout</a>
                     </li>
                 </ul>
@@ -91,11 +94,16 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
+<?php
+    $rating = $review['rating'];
+
+        for ($i = 0; $i<$rating; $i++) {
+            echo "<span class='glyphicon glyphicon-star'></span>";
+        };
+        for ($j = 0; $j<(5-$rating); $j++) {
+            echo "<span class='glyphicon glyphicon-star-empty'></span>";
+        }
+?>
                         <a href="/main/users/<?= $review['id'] ?>"><?= $review['alias'] ?></a>
                         <abbr class="timeago pull-right" title="<?= $review['created_at'] ?>"></abbr>
                         <p><?= $review['review'] ?></p>
