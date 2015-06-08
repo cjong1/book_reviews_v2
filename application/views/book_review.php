@@ -64,7 +64,7 @@
                     <p><?= $reviews[0]['summary'] ?></p>
                 </div>
                 <div class="ratings">
-                    <p class="pull-right"><?= $reviews[0]['count'] ?> review(s)</p>
+                    <p class="pull-right"><?= count($reviews) ?> review(s)</p>
                     <p>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
@@ -96,7 +96,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star-empty"></span>
-                        <a href="/main/users/<?= $review->id ?>"><?= $review['alias'] ?></a>
+                        <a href="/main/users/<?= $review['id'] ?>"><?= $review['alias'] ?></a>
                         <abbr class="timeago pull-right" title="<?= $review['created_at'] ?>"></abbr>
                         <p><?= $review['review'] ?></p>
                     </div>

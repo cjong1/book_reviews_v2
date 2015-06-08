@@ -49,20 +49,26 @@
 
     <div class="container">
 		<div class="row">
-			<div class="six columns" id='user'>
-				<h3>User Alias: <?= $user['alias'] ?></h3>
-				<h6>Name: <?= $user['name'] ?></h6>
-				<h6>Email: <?= $user['email'] ?></h6>
-				<h6>Total Reviews: <?= $user['review']->count ?></h6>
-			<h5>Posted Reviews on the following books:</h5>
-<?php 				
-					foreach ($review as $review) {
-?>
-					<a href="/main/show/<?= $review->id ?>"><?= $review->name ?></a>
-<?php
-					}
-?>
+            <div class="col-md-6" id="info">
+				<h4>User Alias:</h4>
+				<h4>Name:</h4>
+				<h4>Email:</h4>
+				<h4>Total Reviews:</h4>
+                <h4>Posted Reviews on the following books:</h4>
 			</div>
+            <div class="col-md-6">
+                <h4><?= $user['alias'] ?></h4>
+                <h4><?= $user['name'] ?></h4>
+                <h4><?= $user['email'] ?></h4>
+                <h4><?= $user['review']->count ?></h4>
+<?php               
+                    foreach ($review as $review) {
+?>
+                    <h4><a href="/main/show/<?= $review->id ?>"><?= $review->name ?></a></h4>
+<?php
+                    }
+?>
+            </div>
 		</div>
 	</div>
 </body>
