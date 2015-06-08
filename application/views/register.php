@@ -13,8 +13,6 @@
 
     	<div class="site-wrapper-inner">
 
-        <!-- <div class="cover-container"> -->
-
 			<div class="masthead clearfix">
 	            <div class="inner">
 	              <h3 class="masthead-brand">Read & Rate</h3>
@@ -48,8 +46,6 @@
 		        	<input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" name="confirm" required>
 		        <button class="btn btn-lg btn-default submit" type="submit">Register</button>
 		    </form>
-
-        <!-- </div> -->
 
 		</div>
 

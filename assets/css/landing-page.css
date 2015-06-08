@@ -86,12 +86,12 @@ body {
   background-color: transparent;
   border-bottom-color: #fff;
 }
-/*.masthead-nav > .active > a,
+.masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
-}*/
+}
 
 @media (min-width: 768px) {
   .masthead-brand {

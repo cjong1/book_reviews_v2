@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Add a Book and Review</title>
+    <title><?= $reviews[0]['name'] ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
