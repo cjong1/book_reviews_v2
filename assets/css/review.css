@@ -3,10 +3,6 @@
 html,
 body {
   height: 100%;
-/*  background-image: url("../images/parchment-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;*/
   background-color: #F0EBE6;
 
 }
@@ -33,7 +29,6 @@ body {
 
 .navbar-default {
     border-color: rgba(34,34,34,.05);
-/*  background: rgba(0,0,0,0.3);*/
     background-color: white;
     border-bottom: 1px solid #E0D6CC;
     -webkit-transition: all .35s;
@@ -70,7 +65,6 @@ body {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
         background-color: white;
-        /*background-image: url("../images/parchment-background.jpg");*/
     }
 
     .navbar-default .navbar-header .navbar-brand {
@@ -119,7 +113,6 @@ body {
 
 .container {
     padding-top: 75px;
-    /*background: rgba(0,0,0,0.3);*/
 }
 
 .container-fluid {
