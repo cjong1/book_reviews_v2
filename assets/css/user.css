@@ -121,6 +121,9 @@ body {
 	text-align: right
 }
 
-a {
-	color: #735539;
+a:link,
+a:hover,
+a:active,
+a:visited {
+    color: #735539;;
 }

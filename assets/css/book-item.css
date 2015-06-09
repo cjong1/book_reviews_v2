@@ -98,6 +98,7 @@ body {
     .navbar-default.affix .nav>li>a:focus:hover {
         color: black;
     }
+
 }
 
 .container {
@@ -128,16 +129,14 @@ img {
 }
 
 .ratings {
-    padding-right: 10px;
-    padding-left: 10px;
-    color: #d17581;
+    color: #735539;
 }
 
 .thumbnail {
     padding: 0;
 }
 
-h4, h5, a {
+h4, h5, #alias {
     color: #735539;
 }
 

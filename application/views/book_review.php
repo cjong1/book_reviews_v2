@@ -62,7 +62,7 @@
 
             <div class="col-md-9">
                 <div class="caption-full">
-                    <h4><a href="#"><?= $reviews[0]['name'] ?></a></h4>
+                    <h4><?= $reviews[0]['name'] ?></h4>
                     <h5><?= $reviews[0]['author'] ?></h5>
                     <p><?= $reviews[0]['summary'] ?></p>
                 </div>
@@ -85,7 +85,6 @@
                 <div class="text-right">
                     <a href="/main/review/<?= $reviews[0]['book_id'] ?>" class="btn btn-md btn-default">Leave a Review</a>
                 </div>
-
 <?php
             foreach ($reviews as $review) {
 ?>
@@ -93,6 +92,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
+                        Rating: 
 <?php
     $rating = $review['rating'];
 
@@ -108,8 +108,10 @@
             }
         }
 ?>
-                        <a href="/main/users/<?= $review['id'] ?>"><?= $review['alias'] ?></a>
                         <abbr class="timeago pull-right" title="<?= $review['created_at'] ?>"></abbr>
+                        <p>
+                            by <a id="alias" href="/main/users/<?= $review['id'] ?>"><?= $review['alias'] ?></a>
+                        </p>
                         <p><?= $review['review'] ?></p>
                     </div>
                 </div>

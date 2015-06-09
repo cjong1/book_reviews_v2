@@ -109,6 +109,7 @@ body {
     .navbar-default.affix .nav>li>a:focus:hover {
         color: black;
     }
+
 }
 
 .container {
@@ -141,6 +142,7 @@ body {
 .form-signin .form-control:focus {
   z-index: 2;
   border-color: #735539;
+  color: white;
 }
 
 .form-signin input[type="email"],

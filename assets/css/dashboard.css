@@ -133,7 +133,10 @@ hr {
 	margin-top: 15px;
 	display: inline-block;
 }
-
-a {
-	color: #735539;
+    
+a:link,
+a:hover,
+a:active,
+a:visited {
+    color: #735539;;
 }
