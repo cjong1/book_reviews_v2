@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<title>Welcome | Login</title>
 	<link rel="stylesheet" href="../assets/css/bootstrap.css">
