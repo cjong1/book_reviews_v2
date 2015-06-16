@@ -142,7 +142,7 @@ body {
 .form-signin .form-control:focus {
   z-index: 2;
   border-color: #735539;
-  color: white;
+  color: black;
 }
 
 .form-signin input[type="email"],

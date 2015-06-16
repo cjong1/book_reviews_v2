@@ -91,7 +91,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        Rating: 
+                        <!-- Rating:  -->
 <?php
     $rating = $review['rating'];
 
@@ -99,13 +99,15 @@
             echo "<p>No reviews yet.</p>";
         }
         else {
+            echo "Rating: ";
+
             for ($i = 0; $i<$rating; $i++) {
                 echo "<span class='glyphicon glyphicon-star'></span>";
             };
             for ($j = 0; $j<(5-$rating); $j++) {
                 echo "<span class='glyphicon glyphicon-star-empty'></span>";
             }
-        }
+        
 ?>
                         <abbr class="timeago pull-right" title="<?= $review['created_at'] ?>"></abbr>
                         <p>
@@ -116,6 +118,7 @@
                 </div>
 <?php
             }
+        }
 ?>
 
             </div>
